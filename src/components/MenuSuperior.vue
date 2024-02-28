@@ -5,6 +5,7 @@ import CartPlus from 'vue-material-design-icons/CartPlus.vue';
 import Account from 'vue-material-design-icons/Account.vue';
 import Menu from 'vue-material-design-icons/Menu.vue';
 
+
 const menuAberto = ref(false);
 </script>
 
@@ -32,62 +33,108 @@ const menuAberto = ref(false);
   </template>
 
 <style scoped>
+/* Estilo para o cabeçalho */
 header {
-  background: #fff;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  padding: 0.2rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa; /* Cor de fundo do cabeçalho */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
+/* Estilo para o logotipo e nome */
 .header--logo {
   display: flex;
   align-items: center;
 }
+
 .header--logo img {
-  width: 3rem;
-  height: 3rem;
-  margin-right: 0.5rem;
-}
-nav ul {
-  display: flex;
-  gap: 1rem;
-}
-nav li {
-  list-style: none;
+  width: 50px; /* Tamanho do logotipo */
+  height: auto;
+  margin-right: 10px; /* Espaçamento entre o logotipo e o nome */
 }
 
+.header--logo h1 {
+  font-size: 24px;
+  color: #333; /* Cor do texto do nome */
+}
+
+/* Estilo para a navegação */
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav ul.menu li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+/* Estilo para os ícones */
 .header--icons {
   display: flex;
-  gap: 1rem;
-}
-.menu-hamburger {
-  display: none;
+  align-items: center;
 }
 
-@media (max-width: 768px) {
-  nav ul {
-    display: none;
-  }
-  .menu-hamburger {
-    display: block;
-  }
-
-  nav .menu {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    border-radius: 10px;
-    right: 0;
-    text-align: right;
-    padding: 10px 16px;
-  }
-  nav .menu li {
-    display: block;
-    margin-top: 12px;
-  }
+.header--icons svg {
+  width: 30px;
+  height: 30px;
+  fill: #333;
+  transition: fill 0.3s ease;
+  cursor: pointer;
 }
+
+.header--icons svg:hover {
+  fill: #007bff;
+}
+
+/* Estilo para o ícone do menu hamburger */
+.menu-hamburger path {
+  stroke: #333; /* Cor da linha do ícone */
+  stroke-width: 2; 
+}
+
+/* Estilo para os itens de navegação */
+nav{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin-right: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+nav ul li:hover {
+  color: #007bff;
+}
+
+/* Estilo para o link ativo */
+nav ul li{
+  color: #007bff;
+}
+
+/* Estilo para o separador entre os itens de navegação */
+nav ul li:not(:last-child)::after {
+  content: '|';
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #999;
+}
+
 </style>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Micro+5&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -12,4 +12,9 @@ body {
 h1 {
   color: #e74c3c;
   margin-bottom: 0.5rem;
+}
+.micro-5-regular {
+  font-family: "Micro 5", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
