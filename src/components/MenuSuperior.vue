@@ -33,34 +33,33 @@ const menuAberto = ref(false);
   </template>
 
 <style scoped>
-/* Estilo para o cabeçalho */
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #f8f9fa; /* Cor de fundo do cabeçalho */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  background-color: #f8f9fa; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
-/* Estilo para o logotipo e nome */
+
 .header--logo {
   display: flex;
   align-items: center;
 }
 
 .header--logo img {
-  width: 50px; /* Tamanho do logotipo */
+  width: 50px; 
   height: auto;
-  margin-right: 10px; /* Espaçamento entre o logotipo e o nome */
+  margin-right: 10px;
 }
 
 .header--logo h1 {
   font-size: 24px;
-  color: #333; /* Cor do texto do nome */
+  color: #333; 
 }
 
-/* Estilo para a navegação */
 nav ul {
   list-style-type: none;
   display: flex;
@@ -77,7 +76,6 @@ nav ul.menu li {
   font-size: 18px;
 }
 
-/* Estilo para os ícones */
 .header--icons {
   display: flex;
   align-items: center;
@@ -95,13 +93,12 @@ nav ul.menu li {
   fill: #007bff;
 }
 
-/* Estilo para o ícone do menu hamburger */
+
 .menu-hamburger path {
-  stroke: #333; /* Cor da linha do ícone */
+  stroke: #333; 
   stroke-width: 2; 
 }
 
-/* Estilo para os itens de navegação */
 nav{
   display: flex;
   flex-direction: row;
@@ -124,17 +121,30 @@ nav ul li:hover {
   color: #007bff;
 }
 
-/* Estilo para o link ativo */
 nav ul li{
   color: #007bff;
 }
 
-/* Estilo para o separador entre os itens de navegação */
 nav ul li:not(:last-child)::after {
   content: '|';
   margin-left: 5px;
   margin-right: 5px;
   color: #999;
+}
+
+@media (max-width: 768px) {
+  nav {
+    gap: 0.5rem;
+  }
+  nav {
+    width: 92%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  nav {
+    width: 22rem;
+  }
 }
 
 </style>
