@@ -1,9 +1,7 @@
 <script setup>
-  import ListagemProdutos from '@/components/ListagemProdutos.vue';
+import ProductList from '@/components/ListagemProdutos.vue';
 </script>
 
 <template>
-  <ListagemProdutos />
+  <product-list />
 </template>
-
-<style scoped></style>
