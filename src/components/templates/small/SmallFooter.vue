@@ -11,28 +11,24 @@ onBeforeRouteUpdate(() => {
 
 <template>
     <div id="footerMenu" :style="{ display: showMenu ? 'block' : 'none' }">
-      <RouterLink to="/">
-        <i class="mdi mdi-home-outline" />
-        Home
-      </RouterLink>
-      <RouterLink to="/login">
-        <i class="mdi mdi-account" />
-        Login
-      </RouterLink>
-    </div>
-    <div class="icons">
-      <RouterLink to="/">
-        <i class="mdi mdi-home-outline" />
-        Home
-      </RouterLink>
-      <RouterLink to="/">
-        <i class="mdi mdi-account-circle-outline" />
-        Perfil
-      </RouterLink>
-      <RouterLink to="/">
-        <i class="mdi mdi-cart-outline" />
-        Carrinho
-      </RouterLink>
+      <router-link to="/">
+        <i class="icon mdi mdi-account-circle-outline" /> Perfil
+      </router-link>
+      <router-link to="/categorias">
+        <i class="icon mdi mdi-cart-outline" /> Categoria
+      </router-link>
+      <router-link to="/acessorios">
+        <i class="icon mdi mdi-cart-outline" /> Acessorios
+      </router-link>
+      <router-link to="/cores">
+        <i class="icon mdi mdi-cart-outline" /> Cores
+      </router-link>
+      <router-link to="/marcas">
+        <i class="icon mdi mdi-cart-outline" /> Marcas
+      </router-link>
+      <router-link to="/login">
+        <i class="icon mdi mdi-account" /> Login
+      </router-link>
   
       <div class="hamburger" @click="showMenu = !showMenu">
         <i class="mdi mdi-menu" />
