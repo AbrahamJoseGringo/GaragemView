@@ -15,4 +15,4 @@ import Magnify from 'vue-material-design-icons/Magnify.vue';
     gap: 1rem;
     align-items: center;
 }
-</style>
+</style> 
