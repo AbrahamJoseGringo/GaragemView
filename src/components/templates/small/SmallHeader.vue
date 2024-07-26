@@ -1,18 +1,22 @@
 <script setup>
-import Magnify from 'vue-material-design-icons/Magnify.vue';
-
+import LogoTitle from '@/components/templates/LogoTitle.vue';
 </script>
 
 <template>
-    <div class="icons">
-        <Magnify />
-    </div>
+  <logo-title class="pl-0" />
+  <div class="icons">
+    <i class="mdi mdi-magnify" />
+  </div>
 </template>
-
 <style scoped>
-.icons {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
+.pl-0 {
+  padding-left: 0rem;
 }
-</style> 
+
+.icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 1.7rem;
+}
+</style>

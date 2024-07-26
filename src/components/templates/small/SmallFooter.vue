@@ -10,7 +10,7 @@ onBeforeRouteUpdate(() => {
 </script>
 
 <template>
-    <div id="footerMenu" :style="{ display: showMenu ? 'block' : 'none' }">
+   <div id="footerMenu" :style="{ display: showMenu ? 'block' : 'none' }" class="icons">
       <router-link to="/">
         <i class="icon mdi mdi-account-circle-outline" /> Perfil
       </router-link>

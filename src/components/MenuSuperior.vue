@@ -34,68 +34,118 @@ const menuAberto = ref(false);
   </template>
 
 <style scoped>
+
 header {
-  background: #fff;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  padding: 0.2rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
+
 
 .header--logo {
   display: flex;
   align-items: center;
 }
+
 .header--logo img {
-  width: 3rem;
-  height: 3rem;
-  margin-right: 0.5rem;
+  width: 50px; 
+  height: auto;
+  margin-right: 10px;
 }
-.header--logo h1{
-    color: black;
+
+.header--logo h1 {
+  font-size: 24px;
+  color: #333; 
 }
-.header--icons{
-    color: black;
-}
+
 nav ul {
+  list-style-type: none;
   display: flex;
-  gap: 1rem;
 }
-nav li {
-  list-style: none;
+
+nav ul.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav ul.menu li {
+  margin: 10px 0;
+  font-size: 18px;
 }
 
 .header--icons {
   display: flex;
-  gap: 1rem;
+  align-items: center;
 }
-.menu-hamburger {
-  display: none;
+
+.header--icons svg {
+  width: 30px;
+  height: 30px;
+  fill: #333;
+  transition: fill 0.3s ease;
+  cursor: pointer;
+}
+
+.header--icons svg:hover {
+  fill: #007bff;
+}
+
+
+.menu-hamburger path {
+  stroke: #333; 
+  stroke-width: 2; 
+}
+
+nav{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin-right: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+nav ul li:hover {
+  color: #007bff;
+}
+
+nav ul li{
+  color: #007bff;
+}
+
+nav ul li:not(:last-child)::after {
+  content: '|';
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #999;
 }
 
 @media (max-width: 768px) {
-  nav ul {
-    display: none;
+  nav {
+    gap: 0.5rem;
   }
-  .menu-hamburger {
-    display: block;
-  }
-
-  nav .menu {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    border-radius: 10px;
-    right: 0;
-    text-align: right;
-    padding: 10px 16px;
-  }
-  nav .menu li {
-    display: block;
-    margin-top: 12px;
+  nav {
+    width: 92%;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  nav {
+    width: 22rem;
+  }
+}
+
 </style>

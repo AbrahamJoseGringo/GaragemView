@@ -17,23 +17,24 @@ import Instagram from 'vue-material-design-icons/Instagram.vue';
 </template>
 <style scoped>
 .links {
-    width: 100%;
-    justify-content: center;
-    display: flex;
-    gap: 4rem;
-    font-size: 1.2rem;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  gap: 4rem;
+  font-size: 1.2rem;
 }
 
 .links a {
-    color: #000;
-    text-decoration: none;
-    transition: color 0.3s;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .icons {
-    padding-right: 3rem;
-    display: flex;
-    gap: 4rem;
-    align-items: center;
+  padding-right: 3rem;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  font-size: 2.2rem;
 }
 </style>
