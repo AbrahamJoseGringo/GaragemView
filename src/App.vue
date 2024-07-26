@@ -14,4 +14,5 @@
       <p>Copyright &copy; 2024</p>
     </footer>
   </div>
+  
 </template>

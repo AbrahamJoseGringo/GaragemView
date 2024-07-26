@@ -6,6 +6,7 @@ import AcessorioView from "../views/AcessorioView.vue";
 import CorView from "../views/CorView.vue";
 import MarcaView from "../views/MarcaView.vue";
 
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
