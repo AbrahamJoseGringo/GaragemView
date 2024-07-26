@@ -5,15 +5,14 @@ import Magnify from 'vue-material-design-icons/Magnify.vue';
 
 <template>
     <div class="icons">
-      <i class="mdi mdi-magnify" />
+        <Magnify />
     </div>
-  </template>
-  
-  <style scoped>
-  .icons {
+</template>
+
+<style scoped>
+.icons {
     display: flex;
     gap: 1rem;
     align-items: center;
-    font-size: 1.7rem;
-  }
-  </style>
+}
+</style>

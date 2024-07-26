@@ -1,34 +1,40 @@
 <script setup>
+import { onMounted } from 'vue';
+import HomeOutline from 'vue-material-design-icons/HomeOutline.vue';
+import BrushOutline from 'vue-material-design-icons/BrushOutline.vue';
+import Shapeplusoutline from 'vue-material-design-icons/ShapePlusOutline.vue';
+import CardsDiamondOutline from 'vue-material-design-icons/CardsDiamondOutline.vue';
+
+import CarBack from 'vue-material-design-icons/CarBack.vue'
 import LogoTitle from '@/components/templates/LogoTitle.vue';
+
+
 </script>
 <template>
-  <div class="logo_and_menu">
-    <logo-title class="mb-2" />
-    <div class="divider" />
+   <div class="logo_and_menu">
+        <logo-title class="mb-2" />
+        <div class="divider" />
     <div class="menu">
       <router-link to="/">
-        <i class="icon mdi mdi-home-outline"/> Home
+        <HomeOutline  size="30"/> Home
       </router-link>
     </div>
-    <div class="divider" />
+          <div class="divider" />
     <div class="menu">
-      <router-link to="/">
-        <i class="icon mdi mdi-account-circle-outline" /> Perfil
-      </router-link>
       <router-link to="/categorias">
-        <i class="icon mdi mdi-cart-outline" /> Categoria
+       <Shapeplusoutline size="30" /> Categoria
       </router-link>
       <router-link to="/acessorios">
-        <i class="icon mdi mdi-cart-outline" /> Acessorios
+        <CardsDiamondOutline size="30"/>Acessorios
       </router-link>
       <router-link to="/cores">
-        <i class="icon mdi mdi-cart-outline" /> Cores
+        <BrushOutline size="30"/> Cores
       </router-link>
       <router-link to="/marcas">
-        <i class="icon mdi mdi-cart-outline" /> Marcas
+        <CarBack size="30"/> Marcas
       </router-link>
       <router-link to="/login">
-        <i class="icon mdi mdi-account" /> Login
+        <HomeOutline  size="30"/>Login
       </router-link>
     </div>
   </div>

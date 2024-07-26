@@ -1,59 +1,82 @@
 <script setup>
 import { ref } from 'vue';
-import { onBeforeRouteUpdate } from 'vue-router';
+import { onBeforeRouteUpdate } from 'vue-router'
 
-const showMenu = ref(false);
+import AccountCircleOutline from 'vue-material-design-icons/AccountCircleOutline.vue';
+import CartOutline from 'vue-material-design-icons/CartOutline.vue';
+import HomeOutline from 'vue-material-design-icons/HomeOutline.vue';
+import Account from 'vue-material-design-icons/Account.vue'
+import Menu from 'vue-material-design-icons/Menu.vue';
+import BrushOutline from 'vue-material-design-icons/BrushOutline.vue';
+import Shapeplusoutline from 'vue-material-design-icons/ShapePlusOutline.vue';
+import CardsDiamondOutline from 'vue-material-design-icons/CardsDiamondOutline.vue';
+
+
+import CarBack from 'vue-material-design-icons/CarBack.vue'
+const showMenu = ref(false)
 
 onBeforeRouteUpdate(() => {
-  showMenu.value = false;
-});
-</script>
+    showMenu.value = false
+})
 
+</script>
 <template>
-   <div id="footerMenu" :style="{ display: showMenu ? 'block' : 'none' }" class="icons">
-      <router-link to="/">
-        <i class="icon mdi mdi-account-circle-outline" /> Perfil
-      </router-link>
+    <div id="footerMenu" :style="{ display: showMenu ? 'block' : 'none' }">
       <router-link to="/categorias">
-        <i class="icon mdi mdi-cart-outline" /> Categoria
+       <Shapeplusoutline size="30" /> Categoria
       </router-link>
       <router-link to="/acessorios">
-        <i class="icon mdi mdi-cart-outline" /> Acessorios
+        <CardsDiamondOutline size="30"/>Acessorios
       </router-link>
       <router-link to="/cores">
-        <i class="icon mdi mdi-cart-outline" /> Cores
+        <BrushOutline size="30"/> Cores
       </router-link>
       <router-link to="/marcas">
-        <i class="icon mdi mdi-cart-outline" /> Marcas
+        <CarBack size="30"/> Marcas
       </router-link>
-      <router-link to="/login">
-        <i class="icon mdi mdi-account" /> Login
-      </router-link>
-  
-      <div class="hamburger" @click="showMenu = !showMenu">
-        <i class="mdi mdi-menu" />
-        Menu
-      </div>
+        <RouterLink to="/login">
+            <Account size="25" fillColor="#282828" />
+            Login
+        </RouterLink>
     </div>
-  </template>
+    <div class="icons">
+        <RouterLink to="/">
+            <HomeOutline size="25" fillColor="#282828" />
+            Home
+        </RouterLink>
+        <RouterLink to="/">
+            <AccountCircleOutline size="25" fillColor="#282828" />
+            Perfil
+        </RouterLink>
+        <RouterLink to="/">
+            <CartOutline size="25" fillColor="#282828" />
+            Carrinho
+        </RouterLink>
 
+        <div class="hamburger" @click="showMenu = !showMenu">
+            <Menu size="25" fillColor="#282828" />
+            Menu
+        </div>
+    </div>
+</template>
 <style scoped>
 #footerMenu {
     position: fixed;
-    bottom: 15%;
+    bottom: 11%;
     right: 0;
 
-    width: 20%;
-    border-top: #EEEEEE 1px solid;
-    background-color: white;
-
-    display: block;
+  
+    border: #000000 1px solid;
+    background-color: rgb(255, 255, 255);
+    width: 60%;
     padding: 1rem;
+   
+    font-size: 1.3rem;
+  
 }
 
 #footerMenu a {
     display: flex;
-    width: 100%;
     justify-content: space-between;
     text-decoration: none;
     color: #282828;
